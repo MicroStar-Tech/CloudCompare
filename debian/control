@@ -3,8 +3,7 @@ Section: graphics
 Priority: optional
 Maintainer: Gürkan Myczko <tar@debian.org>
 Build-Depends: debhelper-compat (= 13), cmake, libqt5opengl5-dev, libcgal-dev, libdxflib-dev (>= 2.5.0),
- libglew-dev, libfreenect-dev, libgdal-dev, libgomp1, libboost-all-dev, libavcodec-dev, libavformat-dev, libswscale-dev, liblaszip-dev, libeigen3-dev,
- libjsoncpp-dev, libpdal-dev (>= 1.9.1+ds-1~exp2), libcurl4-gnutls-dev | libcurl4-openssl-dev, libcgal-qt5-dev, libqt5svg5-dev, qttools5-dev-tools, qttools5-dev
+ libglew-dev, libfreenect-dev, libgdal-dev, libgomp1, libboost-all-dev, libavcodec-dev, libavformat-dev, libswscale-dev, liblaszip-dev, libeigen3-dev, libpcl-dev, libqt5svg5-dev, libdlib-dev, libproj-dev, libxerces-c-dev, libavutil-dev, libjsoncpp-dev, libpdal-dev (>= 1.9.1+ds-1~exp2), libcurl4-gnutls-dev | libcurl4-openssl-dev, libcgal-qt5-dev, libqt5svg5-dev, qttools5-dev-tools, qttools5-dev, libqt5websockets5-dev, libtbb-dev
 Standards-Version: 4.6.0
 Rules-Requires-Root: no
 Homepage: https://www.danielgm.net/cc/
