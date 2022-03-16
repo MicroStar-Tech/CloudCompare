@@ -1,0 +1,3 @@
+snap/gui/ccViewer.png usr/share/icons
+snap/gui/cloudcompare.png usr/share/icons
+debian/*.desktop usr/share/applications
