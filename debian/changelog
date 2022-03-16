@@ -1,3 +1,11 @@
+cloudcompare (2.11.3+git20220312+ds-1microstar1) unstable; urgency=medium
+
+  * Build more plugins based on the upstream build script
+    https://github.com/CloudCompare/CloudCompare/blob/master/.github/workflows/build.yml
+  * Update debian build scripts based on 2.11.3+git20220202+ds-1
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Tue, 15 Mar 2022 19:36:50 -0700
+
 cloudcompare (2.11.3-4) unstable; urgency=medium
 
   * Apply patch to fix FTBFS. (Closes: #996589)
