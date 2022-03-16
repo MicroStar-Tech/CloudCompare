@@ -1,0 +1,24 @@
+Source: cloudcompare
+Section: graphics
+Priority: optional
+Maintainer: Gürkan Myczko <tar@debian.org>
+Build-Depends: debhelper-compat (= 13), cmake, libqt5opengl5-dev, libcgal-dev, libdxflib-dev (>= 2.5.0),
+ libglew-dev, libfreenect-dev, libgdal-dev, libgomp1, libboost-all-dev, libavcodec-dev, libavformat-dev, libswscale-dev, liblaszip-dev, libeigen3-dev,
+ libjsoncpp-dev, libpdal-dev (>= 1.9.1+ds-1~exp2), libcurl4-gnutls-dev | libcurl4-openssl-dev, libcgal-qt5-dev, libqt5svg5-dev, qttools5-dev-tools, qttools5-dev
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://www.danielgm.net/cc/
+
+Package: cloudcompare
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: 3D point cloud and mesh processing software
+ This is a 3D point cloud (and triangular mesh) processing software. It has
+ been originally designed to perform comparison between two 3D points clouds
+ (such as the ones obtained with a laser scanner) or between a point cloud
+ and a triangular mesh.
+ .
+ It relies on a specific octree structure that enables great performances in
+ this particular function. It was also meant to deal with huge point clouds
+ (typically more than 10 millions points, and up to 120 millions with 2 GB
+ of memory)

@@ -1,0 +1,54 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ cloudcompare (2.11.3-1) experimental; urgency=medium
+ .
+   * New upstream version.
+   * Bump debhelper version to 13, drop d/compat.
+   * Bump standards version to 4.5.0.
+   * d/patches: dropped.
+   * d/ccApplicationBase.cpp: dh_clean patch dropped from d/rules.
+   * d/upstream/metadata: added.
+   * d/control: added Rules-Requires-Root.
+   * d/copyright: update copyright years.
+   * d/clean: added.
+Author: Gürkan Myczko <gurkan@phys.ethz.ch>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2021-09-13
+
+Index: cloudcompare-2.11.3/common/ccApplicationBase.cpp
+===================================================================
+--- cloudcompare-2.11.3.orig/common/ccApplicationBase.cpp
++++ cloudcompare-2.11.3/common/ccApplicationBase.cpp
+@@ -211,14 +211,14 @@ void ccApplicationBase::setupPaths()
+ 	{
+ 		theDir.cdUp();
+ 
+-		m_PluginPaths << (theDir.absolutePath() + "/lib/cloudcompare/plugins");
++		m_PluginPaths << (theDir.absolutePath() + "/lib/x86_64-linux-gnu/cloudcompare/plugins");
+ 		m_ShaderPath = (theDir.absolutePath() + "/share/cloudcompare/shaders");
+ 		m_TranslationPath = (theDir.absolutePath() + "/share/cloudcompare/translations");
+ 	}
+ 	else
+ 	{
+ 		// Choose a reasonable default to look in
+-		m_PluginPaths << "/usr/lib/cloudcompare/plugins";
++		m_PluginPaths << "/usr/lib/x86_64-linux-gnu/cloudcompare/plugins";
+ 		m_ShaderPath = "/usr/share/cloudcompare/shaders";
+ 		m_TranslationPath = "/usr/share/cloudcompare/translations";
+ 	}

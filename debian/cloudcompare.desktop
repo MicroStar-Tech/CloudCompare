@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=CloudCompare
+Comment=3D point cloud and mesh processing software
+Exec=CloudCompare
+Terminal=false
+Categories=Graphics;3DGraphics;Viewer;
+Icon=cloudcompare.png
+Keywords=3d;processing;

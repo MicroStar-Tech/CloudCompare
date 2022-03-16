@@ -1,0 +1,110 @@
+cloudcompare (2.11.3-4) unstable; urgency=medium
+
+  * Apply patch to fix FTBFS. (Closes: #996589)
+    Thanks Adrian Bunk.
+
+ -- Gürkan Myczko <tar@debian.org>  Wed, 17 Nov 2021 12:08:34 +0100
+
+cloudcompare (2.11.3-3) unstable; urgency=medium
+
+  * d/rules:
+    - replace ffmpeg x86_64-linux-gnu parameters with $(DEBARCH)
+      Thanks Adrian Bunk for the hint.
+    - sed the right part for plugins directory.
+  * Update maintainer address.
+
+ -- Gürkan Myczko <tar@debian.org>  Wed, 17 Nov 2021 09:29:07 +0100
+
+cloudcompare (2.11.3-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * d/copyright: update file patterns.
+  * Bump standards versino to 4.6.0.
+  * d/rules: update cmake parameters for plugins.
+  * d/control: add libeigen3-dev to Build-Depends.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Mon, 11 Oct 2021 09:16:20 +0200
+
+cloudcompare (2.11.3-1) experimental; urgency=medium
+
+  * New upstream version.
+  * Bump debhelper version to 13, drop d/compat.
+  * Bump standards version to 4.5.0.
+  * d/patches: dropped.
+  * d/ccApplicationBase.cpp: dh_clean patch dropped from d/rules.
+  * d/upstream/metadata: added.
+  * d/control: added Rules-Requires-Root.
+  * d/copyright: update copyright years.
+  * d/clean: added.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Fri, 20 Nov 2020 15:03:44 +0100
+
+cloudcompare (2.10.3-4) unstable; urgency=medium
+
+  * d/rules: -DCOMPILE_CC_CORE_LIB_WITH_CGAL=OFF (Closes: #947474)
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Wed, 08 Jan 2020 10:28:03 +0100
+
+cloudcompare (2.10.3-3) unstable; urgency=medium
+
+  * Also build animation, broom, gmmreg, and m3c2 plugins.
+  * debian/control: add libavcodec-dev, libavformat-dev, libswscale-dev,
+    liblaszip-dev to build-depends.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Mon, 02 Sep 2019 13:23:19 +0200
+
+cloudcompare (2.10.3-2) unstable; urgency=medium
+
+  * Drop liblas build dependency, will be removed from Debian.
+    Thanks for the patch, Bas Couwenberg. (Closes: #932020)
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Sun, 28 Jul 2019 21:05:50 +0200
+
+cloudcompare (2.10.3-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Mon, 17 Jun 2019 10:02:44 +0200
+
+cloudcompare (2.10.2-2) experimental; urgency=medium
+
+  * debian/control: versioned libpdal-dev for LAZ file support.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Thu, 06 Jun 2019 13:00:24 +0200
+
+cloudcompare (2.10.2-1) experimental; urgency=medium
+
+  * New upstream version.
+  * debian/watch: added.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Tue, 05 Mar 2019 20:43:32 +0100
+
+cloudcompare (2.10.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Thu, 17 Jan 2019 20:24:25 +0100
+
+cloudcompare (2.10-1) unstable; urgency=medium
+
+  * New upstream version.
+  * debian/control: new build-depends libqt5svg5-dev, qttools5-dev-tools,
+    qttools5-dev.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Wed, 09 Jan 2019 12:22:51 +0100
+
+cloudcompare (2.9.1+git20180223-2) unstable; urgency=medium
+
+  * debian/rules:
+    - link against libcgal, cmake configuration.
+    - enable qBLUR, qEDL, qHPR, qCSF, qPCV, qSRA, qSSAO plugins.
+  * debian/control: add build-depends libcgal-qt5-dev.
+  * Bump debhelper version to 4.2.1.
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Mon, 17 Sep 2018 15:09:28 +0200
+
+cloudcompare (2.9.1+git20180223-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #730638)
+
+ -- Gürkan Myczko <gurkan@phys.ethz.ch>  Fri, 23 Feb 2018 08:38:00 +0100
