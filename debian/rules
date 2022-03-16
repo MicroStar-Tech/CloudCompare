@@ -11,8 +11,8 @@ override_dh_installchangelogs:
 	dh_installchangelogs CHANGELOG.md
 
 override_dh_auto_configure:
-	$(shell sed -i s,lib/x86_64-linux-gnu/cloudcompare/plugins,lib/$(DEBARCH)/cloudcompare/plugins,g common/ccApplicationBase.cpp)
-	#$(shell sed -i s,lib/cloudcompare/plugins,lib/$(DEBARCH)/cloudcompare/plugins,g common/ccApplicationBase.cpp)
+	#$(shell sed -i s,lib/x86_64-linux-gnu/cloudcompare/plugins,lib/$(DEBARCH)/cloudcompare/plugins,g common/ccApplicationBase.cpp)
+	$(shell sed -i s,lib/cloudcompare/plugins,lib/$(DEBARCH)/cloudcompare/plugins,g libs/CCAppCommon/src/ccApplicationBase.cpp)
 	dh_auto_configure -- \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DOPTION_PDAL_LAS=ON \
