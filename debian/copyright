@@ -333,7 +333,7 @@ License: RANSAC_SD
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Files: debian/*
-Copyright: 2018-2020 Gürkan Myczko <gurkan@phys.ethz.ch>
+Copyright: 2018-2022 Gürkan Myczko <tar@debian.org>
            2013-2016 Romain Janvier <romain.janvier@univ-orleans.fr>
 License: GPL-2.0+
 
