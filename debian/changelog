@@ -1,3 +1,9 @@
+cloudcompare (2.11.3+git20220312+ds-1microstar2) unstable; urgency=medium
+
+  * Patch ccApplicationBase.cpp to solve the plugin path issue
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Tue, 15 Mar 2022 22:50:29 -0700
+
 cloudcompare (2.11.3+git20220312+ds-1microstar1) unstable; urgency=medium
 
   * Build more plugins based on the upstream build script
