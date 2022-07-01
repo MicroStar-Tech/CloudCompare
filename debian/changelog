@@ -1,3 +1,9 @@
+cloudcompare (2.12.3-1c) unstable; urgency=medium
+
+  * Upstream 2.13.3
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Fri, 1 Jul 2022 03:16:56 -0700
+
 cloudcompare (2.11.3+git20220312+ds-1microstar2) unstable; urgency=medium
 
   * Patch ccApplicationBase.cpp to solve the plugin path issue
