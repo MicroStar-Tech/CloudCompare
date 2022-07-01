@@ -14,7 +14,7 @@ For example,
 
 ```
 $> export DEB_CFLAGS_APPEND="-O3 -flto=16 -fdevirtualize-at-ltrans -flto-odr-type-merging -ffat-lto-objects -fipa-pta"; \
-   export DEB_CXXFLAGS_APPEND="-O3 -flto=16 -fdevirtualize-at-ltrans -flto-odr-type-merging -ffat-lto-objects -fipa-pta"; \ 
+   export DEB_CXXFLAGS_APPEND="-O3 -flto=16 -fdevirtualize-at-ltrans -flto-odr-type-merging -ffat-lto-objects -fipa-pta"; \
    export DEB_LDFLAGS_APPEND="-O3 -flto=16 -fdevirtualize-at-ltrans -flto-odr-type-merging -ffat-lto-objects -fipa-pta"
 ```
 
@@ -22,9 +22,18 @@ $> export DEB_CFLAGS_APPEND="-O3 -flto=16 -fdevirtualize-at-ltrans -flto-odr-typ
 
 Go the the root path of the repository and execute
 
+### Install dependent packages
+
+```
+$> mk-build-deps -i -s sudo
+```
+
+### Start building
+
 ```
 $> dpkg-buildpackage -b --no-sign
 ```
+
 | Arugments   | Description                     |
 |-------------|---------------------------------|
 | `-b`        | build the binaries only         |
