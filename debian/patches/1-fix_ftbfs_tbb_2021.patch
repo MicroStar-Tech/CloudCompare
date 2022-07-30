@@ -1,0 +1,38 @@
+ 
+diff --git a/qCC/ccEnvelopeExtractor.cpp b/qCC/ccEnvelopeExtractor.cpp
+index c90e8b4a..63f1625f 100644
+--- a/qCC/ccEnvelopeExtractor.cpp
++++ b/qCC/ccEnvelopeExtractor.cpp
+@@ -34,6 +34,7 @@
+ #include <PointProjectionTools.h>
+ 
+ #ifdef CC_CORE_LIB_USES_TBB
++#undef emit
+ #include <tbb/parallel_for.h>
+ #endif
+ 
+diff --git a/qCC/mainwindow.cpp b/qCC/mainwindow.cpp
+index 878e8296..0f259b8b 100644
+--- a/qCC/mainwindow.cpp
++++ b/qCC/mainwindow.cpp
+@@ -142,7 +142,7 @@
+ #endif
+ 
+ #ifdef CC_CORE_LIB_USES_TBB
+-#include <tbb/tbb_stddef.h>
++// #include <tbb/tbb_stddef.h>
+ #endif
+ 
+ //Qt
+
+--- a/libs/qCC_db/extern/CCCoreLib/include/ParallelSort.h
++++ b/libs/qCC_db/extern/CCCoreLib/include/ParallelSort.h
+@@ -17,6 +17,8 @@
+ 
+ #elif CC_CORE_LIB_USES_TBB
+ 
++   #undef emit
++
+    #include <tbb/parallel_sort.h>
+ 
+    #define ParallelSort tbb::parallel_sort

@@ -5,7 +5,7 @@ DEBARCH:=$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 export DH_VERBOSE=1
 
 %:
-	dh $@
+	dh $@ --with quilt
 
 override_dh_installchangelogs:
 	dh_installchangelogs CHANGELOG.md
@@ -62,7 +62,8 @@ override_dh_auto_configure:
 		-DPLUGIN_STANDARD_QHPR=ON \
 		-DPLUGIN_STANDARD_QM3C2=ON \
 		-DPLUGIN_STANDARD_QPOISSON_RECON=ON \
-		-DBUILD_TESTING=ON
+		-DBUILD_TESTING=ON \
+		-DFETCHCONTENT_FULLY_DISCONNECTED=OFF
 
 #		-DCMAKE_BUILD_TYPE=Release \
 #		-DOPTION_USE_LIBLAS=ON \
