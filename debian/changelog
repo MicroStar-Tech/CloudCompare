@@ -1,6 +1,14 @@
+cloudcompare (2.12.4-1c) unstable; urgency=medium
+
+  * Upstream 2.12.4
+  * add patches to resolve ftbfs with tbb_2021 and ffmpeg5.0
+  * remove pdal support and add and fix several build flags
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Mon, 1 Aug 2022 03:30:40 -0700
+
 cloudcompare (2.12.3-1c) unstable; urgency=medium
 
-  * Upstream 2.13.3
+  * Upstream 2.12.3
 
  -- Xuqing Liu <ciwei100000@gmail.com>  Fri, 1 Jul 2022 03:16:56 -0700
 
