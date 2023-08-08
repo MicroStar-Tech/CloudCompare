@@ -11,10 +11,10 @@ override_dh_installchangelogs:
 	dh_installchangelogs CHANGELOG.md
 
 override_dh_auto_configure:
-	#$(shell sed -i s,lib/x86_64-linux-gnu/cloudcompare/plugins,lib/$(DEBARCH)/cloudcompare/plugins,g common/ccApplicationBase.cpp)
 	$(shell sed -i s,lib/cloudcompare/plugins,lib/$(DEBARCH)/cloudcompare/plugins,g libs/CCAppCommon/src/ccApplicationBase.cpp)
-	# FETCHCONTENT_FULLY_DISCONNECTED=OFF is to resolve FTBFS for debhelper > 13.8, which sets FETCHCONTENT_FULLY_DISCONNECTED to true
+	# 1. FETCHCONTENT_FULLY_DISCONNECTED=OFF is to resolve FTBFS for debhelper > 13.8, which sets FETCHCONTENT_FULLY_DISCONNECTED to true
 	# https://tracker.debian.org/news/1342805/accepted-debhelper-138-source-into-unstable/
+	# 2. Setting PLUGIN_IO_QE57=OFF for cloudcompare (2.12.x) because the submodule libE57Format doesn't compile with gcc-13
 	dh_auto_configure -- \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DOPTION_USE_SHAPE_LIB=ON \
@@ -44,7 +44,7 @@ override_dh_auto_configure:
 		-DPLUGIN_GL_QSSAO=ON \
 		-DPLUGIN_IO_QADDITIONAL=ON \
 		-DPLUGIN_IO_QCORE=ON \
-		-DPLUGIN_IO_QE57=ON \
+		-DPLUGIN_IO_QE57=OFF \
 		-DQANIMATION_WITH_FFMPEG_SUPPORT=ON \
 		-DPLUGIN_IO_QRDB=ON \
 		-DPLUGIN_IO_QRDB_FETCH_DEPENDENCY=ON \
