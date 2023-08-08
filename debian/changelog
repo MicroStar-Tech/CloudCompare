@@ -1,3 +1,9 @@
+cloudcompare (2.12.4-3c) unstable; urgency=medium
+
+  * add patch for gcc-13
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Tue, 8 Aug 2023 07:21:32 -0700
+
 cloudcompare (2.12.4-2c) unstable; urgency=medium
 
   * drop laszip
